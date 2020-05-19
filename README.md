@@ -1,2 +1,0 @@
-# algorithm
-Created with CodeSandbox
