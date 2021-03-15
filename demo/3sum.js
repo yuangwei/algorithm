@@ -2,4 +2,10 @@
  * 三数之和
  */
 
-const sum3 = function() {}
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+const sum3 = function(nums) {
+  
+}
