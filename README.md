@@ -1,3 +1,3 @@
-# Leetcode算法总结
+# FunLeetcode
 
-## 目录
+## Dictionary
