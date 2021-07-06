@@ -15,10 +15,12 @@ var maxArea = function(height) {
   while (l < r) {
     maxarea = Math.max(maxarea, Math.min(height[l], height[r]) * (r - l));
     if (height[l] < height[r])
-        l++;
+      l++;
     else
-        r--;
+      r--;
   }
   return maxarea;
 };
 ```
+
+使用双指针算法解决此问题为最佳，为了使面积最大化，我们需要考虑更长的两条线段之间的区域。如果我们试图将指向较长线段的指针向内侧移动，矩形区域的面积将受限于较短的线段而不会获得任何增加。但是，在同样的条件下，移动指向较短线段的指针尽管造成了矩形宽度的减小，但却可能会有助于面积的增大。因为移动较短线段的指针会得到一条相对较长的线段，这可以克服由宽度减小而引起的面积减小。
