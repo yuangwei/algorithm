@@ -13,6 +13,7 @@ link: https://leetcode.com/problems/container-with-most-water/
 var maxArea = function(height) {
   var maxarea = 0, l = 0, r = height.length - 1;
   while (l < r) {
+    // 找出较短的那条线段，乘线段长度得到面积
     maxarea = Math.max(maxarea, Math.min(height[l], height[r]) * (r - l));
     if (height[l] < height[r])
       l++;
