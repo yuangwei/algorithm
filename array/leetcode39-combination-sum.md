@@ -48,6 +48,20 @@ Output: [[1,1]]
  * @return {number[][]}
  */
 var combinationSum = function(candidates, target) {
-    
+  const res=[]
+  candidates.sort((a,b)=>a-b)
+  const dfs=(arr,target,index)=>{
+      if(target===0){
+          res.push(arr.slice())
+          return
+      }
+      for(let i=index;i<candidates.length&&target-candidates[i]>=0;i++){
+          arr.push(candidates[i])
+          dfs(arr,target-candidates[i],i)
+          arr.pop()
+      }
+  }
+  dfs([],target,0)
+  return res
 };
 ```
