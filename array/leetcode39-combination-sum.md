@@ -65,3 +65,6 @@ var combinationSum = function(candidates, target) {
   return res
 };
 ```
+本题使用回朔算法解题
+参数就是放将来可能符合结果的数组、目标数、层级（如果没有会出现内部顺序不同但数字都一样的结果）
+跳出条件target等于0；循环中额外加入target-candidates[i]>=0避免了递归的浪费调用，也就不会出现跳出递归判断条件中target小于0的情况
